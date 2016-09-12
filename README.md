@@ -22,11 +22,11 @@ The course begins on September 28 and ends on November 22.
 
 ### Live Webcasts
 
-Live webcasts will take place every Sunday at 8:00pm EDT (UTC-4) and every Tuesday at 1:00pm EDT. During each 30-minute webcast, Kevin will answer your questions live and/or teach additional concepts outside the course material.
+Live webcasts will take place every Sunday at 8:00pm ET and every Tuesday at 1:00pm ET. During each 30-minute webcast, Kevin will answer your questions live and/or teach additional concepts outside the course material.
 
 Webcast attendance is optional. You are welcome to post your questions ahead of time, and watch the webcast recording (and read the chat transcript) afterwards.
 
-Week | Sunday at 8:00pm | Tuesday at 1:00pm
+Week | Sunday at 8:00pm ET | Tuesday at 1:00pm ET
 --- | --- | ---
 1 | October 2 | October 4
 2 | October 9 | October 11
