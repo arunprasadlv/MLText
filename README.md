@@ -20,6 +20,10 @@ The course begins on September 28 and ends on November 22.
 * Week 8: Private Kaggle competition (begins November 16)
 * After the Course
 
+### Course Videos
+
+Links to the video recordings can be found under each section below. Alternatively, you can [view all of the videos on one page](http://www.dataschool.io/mltext3-videos/), or [view the YouTube playlist](https://www.youtube.com/playlist?list=PL5-da3qGB5IBK1krD5d2P3MMCsnFQHrxj).
+
 ### Live Webcasts
 
 Live webcasts will take place every Sunday at 8:00pm ET and every Tuesday at 1:00pm ET. During each 30-minute webcast, Kevin will answer your questions live and/or teach additional concepts outside the course material.
@@ -36,6 +40,10 @@ Week | Sunday at 8:00pm ET | Tuesday at 1:00pm ET
 6 | November 6 | November 8
 7 | November 13 | November 15
 8 | November 20 | November 22
+
+### Submitting Homeworks
+
+If you would like to submit your homework for review, please post it online (ideally as a Jupyter notebook) and send a link to Alex Egorenkov via Slack. Watch [tips for submitting your homework](https://www.youtube.com/watch?v=9DxttSSkl60) (6 minutes) to learn how to post your homework online using [Gist](https://gist.github.com/) and how to make your Jupyter notebook readable.
 
 -----
 
