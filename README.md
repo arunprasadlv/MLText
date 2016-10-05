@@ -11,7 +11,7 @@ The course begins on September 28 and ends on November 22.
 
 * [Before the Course](#before-the-course)
 * [Week 1: Working with Text Data in scikit-learn](#week-1-working-with-text-data-in-scikit-learn)
-* Week 2: Basic Natural Language Processing (NLP) (begins October 5)
+* [Week 2: Basic Natural Language Processing (NLP)](#week-2-basic-natural-language-processing-nlp)
 * Week 3: Intermediate NLP and Basic Regular Expressions (begins October 12)
 * Week 4: Intermediate Regular Expressions (begins October 19)
 * Week 5: Working a Text-Based Data Science Problem (begins October 26)
@@ -33,7 +33,7 @@ Webcast attendance is optional. You are welcome to post your questions ahead of 
 Week | Sunday at 8:00pm ET | Tuesday at 1:00pm ET
 --- | --- | ---
 1 | [October 2](https://www.crowdcast.io/e/master-course/1) | [October 4](https://www.crowdcast.io/e/master-course/2)
-2 | October 9 | October 11
+2 | [October 9](https://www.crowdcast.io/e/master-course/3) | [October 11](https://www.crowdcast.io/e/master-course/4)
 3 | October 16 | October 18
 4 | October 23 | October 25
 5 | October 30 | November 1
@@ -91,6 +91,7 @@ If you would like to submit your homework for review, please post it online (ide
 **After class:**
 * Homework with Yelp reviews data ([notebook](notebooks/01_yelp_homework.ipynb), [script](scripts/01_yelp_homework.py))
     * Dataset: Subset of the data from Kaggle's [Yelp Business Rating Prediction](https://www.kaggle.com/c/yelp-recsys-2013) competition
+    * Solution ([notebook](notebooks/01_yelp_homework_solution.ipynb), [script](scripts/01_yelp_homework_solution.py))
 
 **Resources:**
 * The scikit-learn documentation describes the [performance trade-offs](http://scikit-learn.org/stable/modules/computational_performance.html#influence-of-the-input-data-representation) involved when choosing between sparse and dense input data representations.
@@ -100,3 +101,45 @@ If you would like to submit your homework for review, please post it online (ide
 * For an introduction to logistic regression, read my [lesson notebook](http://nbviewer.jupyter.org/github/justmarkham/DAT8/blob/master/notebooks/12_logistic_regression.ipynb).
 * For a comparison of Naive Bayes and logistic regression (and other classifiers), read the [Supervised learning superstitions cheat sheet](http://ryancompton.net/assets/ml_cheat_sheet/supervised_learning.html) or browse my [comparison table](http://www.dataschool.io/comparing-supervised-learning-algorithms/). Also, this [paper by Andrew Ng](http://ai.stanford.edu/~ang/papers/nips01-discriminativegenerative.pdf) compares the performance of Naive Bayes and logistic regression across a variety of datasets, demonstrating that logistic regression tends to have a lower asymptotic error than Naive Bayes.
 * The scikit-learn documentation on [probability calibration](http://scikit-learn.org/stable/modules/calibration.html) explains what it means for a predicted probability to be calibrated, and my blog post on [click-through rate prediction with logistic regression](https://web.archive.org/web/20160420174205/http://blog.dato.com/beginners-guide-to-click-through-rate-prediction-with-logistic-regression) explains why calibrated probabilities are useful in the real world.
+
+-----
+
+### Week 2: Basic Natural Language Processing (NLP)
+
+**Topics covered:**
+* What is NLP?
+* Reading in the Yelp reviews corpus
+* Tokenizing the text
+* Comparing the accuracy of different approaches
+* Removing frequent terms (stop words)
+* Removing infrequent terms
+* Handling Unicode errors
+
+**Video recordings:**
+* [Part 1](https://www.youtube.com/watch?v=QaWYpEVzjkk&list=PL5-da3qGB5IBK1krD5d2P3MMCsnFQHrxj&index=3) (1:05:32)
+* [Part 2](https://www.youtube.com/watch?v=TB8ptQ35Wzo&list=PL5-da3qGB5IBK1krD5d2P3MMCsnFQHrxj&index=4) (1:05:39)
+
+**Before class:**
+* Watch [Introduction to NLP](https://www.youtube.com/watch?v=nfoudtpBV68&list=PL6397E4B26D00A269&index=1) (13 minutes) from Coursera's NLP course. (Here are the [slides](http://spark-public.s3.amazonaws.com/nlp/slides/intro.pdf) used in the video.)
+* Read the [CountVectorizer documentation](http://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.CountVectorizer.html), focusing on the Parameters section, for a preview of some of the options we will tune during class.
+
+**During class:**
+* Basic Natural Language Processing ([notebook](notebooks/02_basic_nlp.ipynb), [notebook with output](notebooks/02_basic_nlp_updated.ipynb), [script](scripts/02_basic_nlp.py))
+    * Documentation: [CountVectorizer](http://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.CountVectorizer.html), [Decoding text files](http://scikit-learn.org/stable/modules/feature_extraction.html#decoding-text-files)
+    * Dataset: Subset of the data from Kaggle's [Yelp Business Rating Prediction](https://www.kaggle.com/c/yelp-recsys-2013) competition
+
+**After class:**
+* Homework with McDonald's sentiment data ([notebook](notebooks/02_mcdonalds_homework.ipynb), [script](scripts/02_mcdonalds_homework.py))
+    * Dataset: McDonald's customer comments annotated by [CrowdFlower](http://www.crowdflower.com/data-for-everyone)
+
+**Resources:**
+* [A Few Useful Things to Know about Machine Learning](https://homes.cs.washington.edu/~pedrod/papers/cacm12.pdf) is a classic paper that discusses multiple topics relevant to this week's class: overfitting, feature engineering, and the curse of dimensionality.
+* This slide deck concisely defines many of the [key NLP terms](https://github.com/ga-students/DAT_SF_9/blob/master/16_Text_Mining/DAT9_lec16_Text_Mining.pdf).
+* [Automatically Categorizing Yelp Businesses](http://engineeringblog.yelp.com/2015/09/automatically-categorizing-yelp-businesses.html) discusses how Yelp uses NLP and scikit-learn to solve the problem of uncategorized businesses.
+* [Putting 1 million new words into the dictionary](https://www.youtube.com/watch?v=sum5Hq2FTsw) (42 minutes) presents a Python-based text classification pipeline for locating the definitions of previously undefined words.
+* [How to Read the Mind of a Supreme Court Justice](http://fivethirtyeight.com/features/how-to-read-the-mind-of-a-supreme-court-justice/) discusses CourtCast, a machine learning model that predicts the outcome of Supreme Court cases using text-based features only. (The CourtCast creator wrote a post explaining [how it works](https://sciencecowboy.wordpress.com/2015/03/05/predicting-the-supreme-court-from-oral-arguments/), and the [Python code](https://github.com/nasrallah/CourtCast) is available on GitHub.)
+* [Identifying Humorous Cartoon Captions](http://www.cs.huji.ac.il/~dshahaf/pHumor.pdf) is a readable paper about identifying funny captions submitted to the New Yorker Caption Contest.
+* The Unicode Consortium has helpful materials on the Unicode standard, including a [Technical Introduction](http://www.unicode.org/standard/principles.html) and an incredibly detailed [tutorial](http://www.unicode.org/notes/tn23/Muller-Slides+Narr.pdf).
+* [The Absolute Minimum Every Software Developer Absolutely, Positively Must Know About Unicode and Character Sets](http://www.joelonsoftware.com/articles/Unicode.html) is a classic post by Joel Spolsky. [Unicode in Python, Completely Demystified](http://farmdev.com/talks/unicode/), Ned Batchelder's [Pragmatic Unicode](http://nedbatchelder.com/text/unipain.html), the [Unicode HOWTO](https://docs.python.org/2/howto/unicode.html) from Python's documentation, and this [StackOverflow Q&A](http://stackoverflow.com/questions/11339955/python-string-encode-decode) are also good resources.
+* If you are a fan of emoji, you may enjoy browsing the Unicode Code Charts for [Emoticons](http://www.unicode.org/charts/PDF/U1F600.pdf) and [Miscellaneous Symbols and Pictographs](http://www.unicode.org/charts/PDF/U1F300.pdf), reading about [how emoji get added to the Unicode standard](http://blog.emojipedia.org/unicode-8-what-and-when/), or viewing the [emoji candidates for future Unicode releases](http://emojipedia.org/emojipedia/sample-images/).
+* The scikit-learn documentation on [decoding text files](http://scikit-learn.org/stable/modules/feature_extraction.html#decoding-text-files) contains good advice for dealing with encoding errors.
