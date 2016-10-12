@@ -12,7 +12,7 @@ The course begins on September 28 and ends on November 22.
 * [Before the Course](#before-the-course)
 * [Week 1: Working with Text Data in scikit-learn](#week-1-working-with-text-data-in-scikit-learn)
 * [Week 2: Basic Natural Language Processing (NLP)](#week-2-basic-natural-language-processing-nlp)
-* Week 3: Intermediate NLP and Basic Regular Expressions (begins October 12)
+* [Week 3: Intermediate NLP and Basic Regular Expressions](#week-3-intermediate-nlp-and-basic-regular-expressions)
 * Week 4: Intermediate Regular Expressions (begins October 19)
 * Week 5: Working a Text-Based Data Science Problem (begins October 26)
 * Week 6: Advanced Machine Learning Techniques (begins November 2)
@@ -34,7 +34,7 @@ Week | Sunday at 8:00pm ET | Tuesday at 1:00pm ET
 --- | --- | ---
 1 | [October 2](https://www.crowdcast.io/e/master-course/1) | [October 4](https://www.crowdcast.io/e/master-course/2)
 2 | [October 9](https://www.crowdcast.io/e/master-course/3) | [October 11](https://www.crowdcast.io/e/master-course/4)
-3 | October 16 | October 18
+3 | [October 16](https://www.crowdcast.io/e/master-course/5) | [October 18](https://www.crowdcast.io/e/master-course/6)
 4 | October 23 | October 25
 5 | October 30 | November 1
 6 | November 6 | November 8
@@ -118,6 +118,7 @@ If you would like to submit your homework for review, please post it online (ide
 **Video recordings:**
 * [Part 1](https://www.youtube.com/watch?v=QaWYpEVzjkk&list=PL5-da3qGB5IBK1krD5d2P3MMCsnFQHrxj&index=3) (1:05:32)
 * [Part 2](https://www.youtube.com/watch?v=TB8ptQ35Wzo&list=PL5-da3qGB5IBK1krD5d2P3MMCsnFQHrxj&index=4) (1:05:39)
+* [Explanation of Week 2 homework solution](https://www.youtube.com/watch?v=T4zbsw6cl1s&list=PL5-da3qGB5IBK1krD5d2P3MMCsnFQHrxj&index=5) (1:07:01)
 
 **Before class:**
 * Watch [Introduction to NLP](https://www.youtube.com/watch?v=nfoudtpBV68&list=PL6397E4B26D00A269&index=1) (13 minutes) from Coursera's NLP course. (Here are the [slides](http://spark-public.s3.amazonaws.com/nlp/slides/intro.pdf) used in the video.)
@@ -131,6 +132,7 @@ If you would like to submit your homework for review, please post it online (ide
 **After class:**
 * Homework with McDonald's sentiment data ([notebook](notebooks/02_mcdonalds_homework.ipynb), [script](scripts/02_mcdonalds_homework.py))
     * Dataset: McDonald's customer comments annotated by [CrowdFlower](http://www.crowdflower.com/data-for-everyone)
+    * Solution ([notebook](notebooks/02_mcdonalds_homework_solution.ipynb), [script](scripts/02_mcdonalds_homework_solution.py), [video explanation](https://www.youtube.com/watch?v=T4zbsw6cl1s&list=PL5-da3qGB5IBK1krD5d2P3MMCsnFQHrxj&index=5))
 
 **Resources:**
 * [A Few Useful Things to Know about Machine Learning](https://homes.cs.washington.edu/~pedrod/papers/cacm12.pdf) is a classic paper that discusses multiple topics relevant to this week's class: overfitting, feature engineering, and the curse of dimensionality.
@@ -143,3 +145,65 @@ If you would like to submit your homework for review, please post it online (ide
 * [The Absolute Minimum Every Software Developer Absolutely, Positively Must Know About Unicode and Character Sets](http://www.joelonsoftware.com/articles/Unicode.html) is a classic post by Joel Spolsky. [Unicode in Python, Completely Demystified](http://farmdev.com/talks/unicode/), Ned Batchelder's [Pragmatic Unicode](http://nedbatchelder.com/text/unipain.html), the [Unicode HOWTO](https://docs.python.org/2/howto/unicode.html) from Python's documentation, and this [StackOverflow Q&A](http://stackoverflow.com/questions/11339955/python-string-encode-decode) are also good resources.
 * If you are a fan of emoji, you may enjoy browsing the Unicode Code Charts for [Emoticons](http://www.unicode.org/charts/PDF/U1F600.pdf) and [Miscellaneous Symbols and Pictographs](http://www.unicode.org/charts/PDF/U1F300.pdf), reading about [how emoji get added to the Unicode standard](http://blog.emojipedia.org/unicode-8-what-and-when/), or viewing the [emoji candidates for future Unicode releases](http://emojipedia.org/emojipedia/sample-images/).
 * The scikit-learn documentation on [decoding text files](http://scikit-learn.org/stable/modules/feature_extraction.html#decoding-text-files) contains good advice for dealing with encoding errors.
+
+-----
+
+### Week 3: Intermediate NLP and Basic Regular Expressions
+
+**Topics covered:**
+* Intermediate NLP:
+    * Reading in the Yelp reviews corpus
+    * Term Frequency-Inverse Document Frequency (TF-IDF)
+    * Using TF-IDF to summarize a Yelp review
+    * Sentiment analysis using TextBlob
+* Basic Regular Expressions:
+    * Why learn regular expressions?
+    * Rules for searching
+    * Metacharacters
+    * Quantifiers
+    * Using regular expressions in Python
+    * Match groups
+    * Character classes
+    * Finding multiple matches
+
+**Video recordings:**
+* [Part 1](https://www.youtube.com/watch?v=jEsEJlrn-io&list=PL5-da3qGB5IBK1krD5d2P3MMCsnFQHrxj&index=6) on Intermediate NLP (56:51)
+* [Part 2](https://www.youtube.com/watch?v=Vyn99hLGZwM&list=PL5-da3qGB5IBK1krD5d2P3MMCsnFQHrxj&index=7) on Basic Regular Expressions (1:27:21)
+
+**Before class:**
+* Install TextBlob by following [these instructions](https://textblob.readthedocs.org/en/dev/install.html), and then test that installation was successful by running `import textblob` from within Python.
+
+**During class:**
+* Intermediate Natural Language Processing ([notebook](notebooks/03_intermediate_nlp.ipynb), [notebook with output](notebooks/03_intermediate_nlp_updated.ipynb), [script](scripts/03_intermediate_nlp.py))
+    * Documentation: [CountVectorizer](http://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.CountVectorizer.html), [TfidfVectorizer](http://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.TfidfVectorizer.html), [TextBlob](https://textblob.readthedocs.org/)
+    * Dataset: Subset of the data from Kaggle's [Yelp Business Rating Prediction](https://www.kaggle.com/c/yelp-recsys-2013) competition
+* Basic Regular Expressions
+    * [Regular expressions 101](https://regex101.com/#python): real-time testing of regular expressions
+    * Reference guide ([notebook](notebooks/03_basic_regex.ipynb), [notebook with output](notebooks/03_basic_regex_updated.ipynb), [script](scripts/03_basic_regex.py))
+    * Class exercises ([notebook](notebooks/03_basic_regex_exercise.ipynb), [script](scripts/03_basic_regex_exercise.py))
+    * Solution to class exercises ([notebook](notebooks/03_basic_regex_exercise_solution.ipynb), [script](scripts/03_basic_regex_exercise_solution.py))
+    * Datasets: Baltimore homicides, email messages
+
+**After class:**
+* Using TF-IDF, write a document summarizer for a corpus of your choosing, but summarize using full sentences or paragraphs rather than individual words. (This approach is similar to the [SMMRY](http://smmry.com/about) algorithm, which is used by Reddit's [autotldr](https://np.reddit.com/r/autotldr/comments/31b9fm/faq_autotldr_bot/).)
+    * Before beginning, you may want to watch the [four lectures on summarization](https://www.youtube.com/watch?v=EZLCOrrl0Wc&list=PL6397E4B26D00A269&index=98) (28 minutes) from Coursera's NLP course. (Here are the [slides](http://spark-public.s3.amazonaws.com/nlp/slides/summarization.pdf) used in the videos.)
+    * You can use my lesson code as a starting point, or build something from scratch!
+* Homework with basic regular expressions ([notebook](notebooks/03_basic_regex_homework.ipynb), [script](scripts/03_basic_regex_homework.py))
+    * Datasets: [FAA tower closures](http://www.faa.gov/news/media/fct_closed.pdf), my Stack Overflow [reputation history](http://stackoverflow.com/reputation)
+
+**NLP Resources:**
+* Coursera's NLP course has [video lectures](https://www.youtube.com/playlist?list=PL6397E4B26D00A269) on sentiment analysis, TFIDF, summarization, and many other fundamental NLP topics. (Here are the [slides](http://web.stanford.edu/~jurafsky/NLPCourseraSlides.html) used in all of the videos.)
+* [TF-IDF is about what matters](http://planspace.org/20150524-tfidf_is_about_what_matters/) explains how scikit-learn computes TF-IDF scores.
+* FiveThirtyEight used TF-IDF to compute the most repeated talking points by the 2016 [Republican](http://fivethirtyeight.com/features/these-are-the-phrases-each-gop-candidate-repeats-most/) and [Democratic](http://fivethirtyeight.com/features/these-are-the-phrases-that-sanders-and-clinton-repeat-most/) presidential candidates. (Here is the [data and Python script](https://github.com/fivethirtyeight/data/tree/master/repeated-phrases-gop) for the Republican analysis.)
+* [The Simpsons by the Data](http://toddwschneider.com/posts/the-simpsons-by-the-data/) uses TF-IDF on episode scripts from The Simpsons to create episode summaries. (Here is the [dataset](https://www.kaggle.com/wcukierski/the-simpsons-by-the-data).)
+* [Modern Methods for Sentiment Analysis](http://districtdatalabs.silvrback.com/modern-methods-for-sentiment-analysis) shows how "word vectors" can be used for more accurate sentiment analysis.
+* In [Sentiment Classification Using scikit-learn](https://www.youtube.com/watch?v=y3ZTKFZ-1QQ) (50 minutes), Facebook explains how they detect sentiment by training a Naive Bayes model on emoji-labeled data.
+* [Natural Language Processing with Python](http://www.nltk.org/book/) is the most popular book for going in-depth with the [Natural Language Toolkit](http://www.nltk.org/) (NLTK).
+* [spaCy](https://spacy.io/) is a newer Python library for text processing that is focused on performance (unlike NLTK).
+* If you want to get serious about NLP, [Stanford CoreNLP](http://stanfordnlp.github.io/CoreNLP/) is a suite of tools (written in Java) that is highly regarded.
+
+**Regular Expressions Resources:**
+* Google's Python Class includes an excellent [introductory lesson](https://developers.google.com/edu/python/regular-expressions) on regular expressions (which also has an associated [video](https://www.youtube.com/watch?v=kWyoYtvJpe4&index=4&list=PL5-da3qGB5IA5NwDxcEJ5dvt8F9OQP7q5)).
+* Python for Informatics has a nice [chapter](http://www.pythonlearn.com/html-270/book012.html) on regular expressions. (If you want to run the examples, you'll need to download [mbox.txt](http://www.py4inf.com/code/mbox.txt) and [mbox-short.txt](http://www.py4inf.com/code/mbox-short.txt).)
+* [5 Tools You Didn't Know That Use Regular Expressions](http://blog.codeschool.io/2015/07/30/5-tools-you-didnt-know-that-use-regular-expressions/) demonstrates how regular expressions can be used with Excel, Word, Google Spreadsheets, Google Forms, text editors, and other tools.
+* This relatively simple [regular expression pattern](http://sentiment.christopherpotts.net/tokenizing.html#emoticons) can apparently capture 96% of emoticons used on Twitter.
