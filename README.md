@@ -13,7 +13,7 @@ The course begins on September 28 and ends on November 22.
 * [Week 1: Working with Text Data in scikit-learn](#week-1-working-with-text-data-in-scikit-learn)
 * [Week 2: Basic Natural Language Processing (NLP)](#week-2-basic-natural-language-processing-nlp)
 * [Week 3: Intermediate NLP and Basic Regular Expressions](#week-3-intermediate-nlp-and-basic-regular-expressions)
-* Week 4: Intermediate Regular Expressions (begins October 19)
+* [Week 4: Intermediate Regular Expressions](#week-4-intermediate-regular-expressions)
 * Week 5: Working a Text-Based Data Science Problem (begins October 26)
 * Week 6: Advanced Machine Learning Techniques (begins November 2)
 * Week 7: Private Kaggle competition (begins November 9)
@@ -35,7 +35,7 @@ Week | Sunday at 8:00pm ET | Tuesday at 1:00pm ET
 1 | [October 2](https://www.crowdcast.io/e/master-course/1) | [October 4](https://www.crowdcast.io/e/master-course/2)
 2 | [October 9](https://www.crowdcast.io/e/master-course/3) | [October 11](https://www.crowdcast.io/e/master-course/4)
 3 | [October 16](https://www.crowdcast.io/e/master-course/5) | [October 18](https://www.crowdcast.io/e/master-course/6)
-4 | October 23 | October 25
+4 | [October 23](https://www.crowdcast.io/e/master-course/7) | [October 25](https://www.crowdcast.io/e/master-course/8)
 5 | October 30 | November 1
 6 | November 6 | November 8
 7 | November 13 | November 15
@@ -188,8 +188,10 @@ If you would like to submit your homework for review, please post it online (ide
 * Using TF-IDF, write a document summarizer for a corpus of your choosing, but summarize using full sentences or paragraphs rather than individual words. (This approach is similar to the [SMMRY](http://smmry.com/about) algorithm, which is used by Reddit's [autotldr](https://np.reddit.com/r/autotldr/comments/31b9fm/faq_autotldr_bot/).)
     * Before beginning, you may want to watch the [four lectures on summarization](https://www.youtube.com/watch?v=EZLCOrrl0Wc&list=PL6397E4B26D00A269&index=98) (28 minutes) from Coursera's NLP course. (Here are the [slides](http://spark-public.s3.amazonaws.com/nlp/slides/summarization.pdf) used in the videos.)
     * You can use my lesson code as a starting point, or build something from scratch!
+    * Example solution ([notebook](notebooks/03_intermediate_nlp_homework_solution.ipynb), [script](scripts/03_intermediate_nlp_homework_solution.py))
 * Homework with basic regular expressions ([notebook](notebooks/03_basic_regex_homework.ipynb), [script](scripts/03_basic_regex_homework.py))
     * Datasets: [FAA tower closures](http://www.faa.gov/news/media/fct_closed.pdf), my Stack Overflow [reputation history](http://stackoverflow.com/reputation)
+    * Solution ([notebook](notebooks/03_basic_regex_homework_solution.ipynb), [script](scripts/03_basic_regex_homework_solution.py))
 
 **NLP Resources:**
 * Coursera's NLP course has [video lectures](https://www.youtube.com/playlist?list=PL6397E4B26D00A269) on sentiment analysis, TFIDF, summarization, and many other fundamental NLP topics. (Here are the [slides](http://web.stanford.edu/~jurafsky/NLPCourseraSlides.html) used in all of the videos.)
@@ -207,3 +209,40 @@ If you would like to submit your homework for review, please post it online (ide
 * Python for Informatics has a nice [chapter](http://www.pythonlearn.com/html-270/book012.html) on regular expressions. (If you want to run the examples, you'll need to download [mbox.txt](http://www.py4inf.com/code/mbox.txt) and [mbox-short.txt](http://www.py4inf.com/code/mbox-short.txt).)
 * [5 Tools You Didn't Know That Use Regular Expressions](http://blog.codeschool.io/2015/07/30/5-tools-you-didnt-know-that-use-regular-expressions/) demonstrates how regular expressions can be used with Excel, Word, Google Spreadsheets, Google Forms, text editors, and other tools.
 * This relatively simple [regular expression pattern](http://sentiment.christopherpotts.net/tokenizing.html#emoticons) can apparently capture 96% of emoticons used on Twitter.
+
+-----
+
+### Week 4: Intermediate Regular Expressions
+
+**Topics covered:**
+* Week 3 homework review
+* Greedy or lazy quantifiers
+* Alternatives
+* Substitution
+* Anchors
+* Option flags
+* Assorted functionality
+
+**Video recordings:**
+* [Part 1](https://www.youtube.com/watch?v=kYbDXprRx4Y&list=PL5-da3qGB5IBK1krD5d2P3MMCsnFQHrxj&index=8) (1:03:24)
+* [Part 2](https://www.youtube.com/watch?v=tX7G77V7YyI&list=PL5-da3qGB5IBK1krD5d2P3MMCsnFQHrxj&index=9) (1:00:10)
+
+**During class:**
+* Intermediate Regular Expressions
+    * [Regular expressions 101](https://regex101.com/#python): real-time testing of regular expressions
+    * Reference guide ([notebook](notebooks/04_intermediate_regex.ipynb), [notebook with output](notebooks/04_intermediate_regex_updated.ipynb), [script](scripts/04_intermediate_regex.py))
+    * Class exercises ([notebook](notebooks/04_intermediate_regex_exercise.ipynb), [script](scripts/04_intermediate_regex_exercise.py))
+    * Solution to class exercises ([notebook](notebooks/04_intermediate_regex_exercise_solution.ipynb), [script](scripts/04_intermediate_regex_exercise_solution.py))
+    * Datasets: [FAA tower closures](http://www.faa.gov/news/media/fct_closed.pdf), my Stack Overflow [reputation history](http://stackoverflow.com/reputation), Baltimore homicides, subset of the data from Kaggle's [Yelp Business Rating Prediction](https://www.kaggle.com/c/yelp-recsys-2013) competition, [IMDb top 100 movies](http://www.imdb.com/chart/top)
+
+**After class:**
+* Homework with intermediate regular expressions ([notebook](notebooks/04_intermediate_regex_homework.ipynb), [script](scripts/04_intermediate_regex_homework.py))
+    * Dataset: [UFO reports](https://github.com/planetsig/ufo-reports) from the [National UFO Reporting Center](http://www.nuforc.org/)
+
+**Resources:**
+* The [Regular Expression HOWTO](https://docs.python.org/2/howto/regex.html) from Python's documentation is well-written and includes some additional functionality not covered in class. (Here's the [Python 3 version](https://docs.python.org/3/howto/regex.html), which is nearly identical.)
+* Here are two nice sets of exercises ([part 1](https://regex.netlify.com/exercises), [part 2](https://regex.netlify.com/exercises2)) for practicing regular expressions, including solutions ([part 1](http://pastebin.com/DbGHbmUF), [part 2](http://pastebin.com/nVDrfJ1K)). The same author also created a simple [regex cheat sheet](https://regex.netlify.com/cheat-sheet).
+* [Regex Golf](http://regex.alf.nu/) is an interactive game for practicing regular expressions. (It inspired this [xkcd comic](http://www.explainxkcd.com/wiki/index.php/1313:_Regex_Golf), which then inspired two lengthy notebooks by Peter Norvig: [part 1](http://nbviewer.jupyter.org/url/norvig.com/ipython/xkcd1313.ipynb), [part 2](http://nbviewer.jupyter.org/url/norvig.com/ipython/xkcd1313-part2.ipynb).)
+* [Breaking the Ice with Regular Expressions](https://www.codeschool.com/courses/breaking-the-ice-with-regular-expressions/) is an interactive Code School course. Only the first "level" is free, though you can still view the [slides](http://courseware.codeschool.com/breaking-the-ice-with-regular-expressions/slides/CodeSchool-BreakingTheIceWithRegularExpressions-Full.pdf) for the entire course.
+* If you want to go really deep with regular expressions, [RexEgg](http://www.rexegg.com/) includes endless articles and tutorials.
+* [Exploring Expressions of Emotions in GitHub Commit Messages](http://geeksta.net/geeklog/exploring-expressions-emotions-github-commit-messages/) is a fun example of how regular expressions can be used for data analysis, [Emojineering](http://instagram-engineering.tumblr.com/post/118304328152/emojineering-part-2-implementing-hashtag-emoji) explains how Instagram uses regular expressions to detect emoji in hashtags, and [Writing a Fuzzy Receipt Parser in Python](http://tech.trivago.com/2015/10/06/python_receipt_parser/) demonstrates the use of regular expressions for extracting structured data from OCR-generated text.
