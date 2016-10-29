@@ -277,7 +277,8 @@ If you would like to submit your homework for review, please post it online (ide
     * Documentation: [Nearest Neighbors classification](http://scikit-learn.org/stable/modules/neighbors.html#nearest-neighbors-classification), [Cross-validation](http://scikit-learn.org/stable/modules/cross_validation.html), [Dummy estimators](http://scikit-learn.org/stable/modules/model_evaluation.html#dummy-estimators), [Grid search](http://scikit-learn.org/stable/modules/grid_search.html), [Imputation of missing values](http://scikit-learn.org/stable/modules/preprocessing.html#imputation-of-missing-values), [Pipeline](http://scikit-learn.org/stable/modules/pipeline.html)
 
 **After class:**
-* The homework will be added soon. Thanks for your patience!
+* Homework with Hacker News data ([notebook](notebooks/05_hacker_news_homework.ipynb), script)
+    * Dataset: A year of posts from [Hacker News](https://www.kaggle.com/hacker-news/hacker-news-posts)
 
 **Resources:**
 * [Learning from the best](http://blog.kaggle.com/2014/08/01/learning-from-the-best/) is an excellent blog post covering top tips from Kaggle Masters on how to do well on Kaggle.
