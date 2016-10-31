@@ -1,4 +1,4 @@
-# # Homework with Hacker News data (Solution)
+# # Homework with Hacker News data
 # 
 # ## About Hacker News
 # 
