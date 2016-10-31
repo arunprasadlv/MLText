@@ -277,7 +277,7 @@ If you would like to submit your homework for review, please post it online (ide
     * Documentation: [Nearest Neighbors classification](http://scikit-learn.org/stable/modules/neighbors.html#nearest-neighbors-classification), [Cross-validation](http://scikit-learn.org/stable/modules/cross_validation.html), [Dummy estimators](http://scikit-learn.org/stable/modules/model_evaluation.html#dummy-estimators), [Grid search](http://scikit-learn.org/stable/modules/grid_search.html), [Imputation of missing values](http://scikit-learn.org/stable/modules/preprocessing.html#imputation-of-missing-values), [Pipeline](http://scikit-learn.org/stable/modules/pipeline.html)
 
 **After class:**
-* Homework with Hacker News data ([notebook](notebooks/05_hacker_news_homework.ipynb), script)
+* Homework with Hacker News data ([notebook](notebooks/05_hacker_news_homework.ipynb), [script](scripts/05_hacker_news_homework.py))
     * Dataset: A year of posts from [Hacker News](https://www.kaggle.com/hacker-news/hacker-news-posts)
 
 **Resources:**
