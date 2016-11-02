@@ -14,7 +14,7 @@ The course begins on September 28 and ends on November 22.
 * [Week 2: Basic Natural Language Processing (NLP)](#week-2-basic-natural-language-processing-nlp)
 * [Week 3: Intermediate NLP and Basic Regular Expressions](#week-3-intermediate-nlp-and-basic-regular-expressions)
 * [Week 4: Intermediate Regular Expressions](#week-4-intermediate-regular-expressions)
-* Week 5: Working a Text-Based Data Science Problem (begins October 26)
+* [Week 5: Working a Text-Based Data Science Problem](#week-5-working-a-text-based-data-science-problem)
 * Week 6: Advanced Machine Learning Techniques (begins November 2)
 * Week 7: Private Kaggle competition (begins November 9)
 * Week 8: Private Kaggle competition (begins November 16)
@@ -36,7 +36,7 @@ Week | Sunday at 8:00pm ET | Tuesday at 1:00pm ET
 2 | [October 9](https://www.crowdcast.io/e/master-course/3) | [October 11](https://www.crowdcast.io/e/master-course/4)
 3 | [October 16](https://www.crowdcast.io/e/master-course/5) | [October 18](https://www.crowdcast.io/e/master-course/6)
 4 | [October 23](https://www.crowdcast.io/e/master-course/7) | [October 25](https://www.crowdcast.io/e/master-course/8)
-5 | October 30 | November 1
+5 | [October 30](https://www.crowdcast.io/e/master-course/9) | [November 1](https://www.crowdcast.io/e/master-course/10)
 6 | November 6 | November 8
 7 | November 13 | November 15
 8 | November 20 | November 22
@@ -238,6 +238,7 @@ If you would like to submit your homework for review, please post it online (ide
 **After class:**
 * Homework with intermediate regular expressions ([notebook](notebooks/04_intermediate_regex_homework.ipynb), [script](scripts/04_intermediate_regex_homework.py))
     * Dataset: [UFO reports](https://github.com/planetsig/ufo-reports) from the [National UFO Reporting Center](http://www.nuforc.org/)
+    * Solution ([notebook](notebooks/04_intermediate_regex_homework_solution.ipynb), [script](scripts/04_intermediate_regex_homework_solution.py))
 
 **Resources:**
 * The [Regular Expression HOWTO](https://docs.python.org/2/howto/regex.html) from Python's documentation is well-written and includes some additional functionality not covered in class. (Here's the [Python 3 version](https://docs.python.org/3/howto/regex.html), which is nearly identical.)
@@ -246,3 +247,45 @@ If you would like to submit your homework for review, please post it online (ide
 * [Breaking the Ice with Regular Expressions](https://www.codeschool.com/courses/breaking-the-ice-with-regular-expressions/) is an interactive Code School course. Only the first "level" is free, though you can still view the [slides](http://courseware.codeschool.com/breaking-the-ice-with-regular-expressions/slides/CodeSchool-BreakingTheIceWithRegularExpressions-Full.pdf) for the entire course.
 * If you want to go really deep with regular expressions, [RexEgg](http://www.rexegg.com/) includes endless articles and tutorials.
 * [Exploring Expressions of Emotions in GitHub Commit Messages](http://geeksta.net/geeklog/exploring-expressions-emotions-github-commit-messages/) is a fun example of how regular expressions can be used for data analysis, and [Writing a Fuzzy Receipt Parser in Python](http://tech.trivago.com/2015/10/06/python_receipt_parser/) demonstrates the use of regular expressions for extracting structured data from OCR-generated text.
+
+-----
+
+### Week 5: Working a Text-Based Data Science Problem
+
+**Topics covered:**
+* Reading in and exploring the data
+* Feature engineering
+* Model evaluation using train_test_split and cross_val_score
+* Making predictions for new data
+* Searching for optimal tuning parameters using GridSearchCV
+* Extracting features from text using CountVectorizer
+* Chaining steps into a Pipeline
+
+**Video recordings:**
+* [Part 1](https://www.youtube.com/watch?v=3ptoJ7A4Ogw&list=PL5-da3qGB5IBK1krD5d2P3MMCsnFQHrxj&index=10) (1:13:13)
+* [Part 2](https://www.youtube.com/watch?v=6btVIHcBjAM&list=PL5-da3qGB5IBK1krD5d2P3MMCsnFQHrxj&index=11) (1:00:50)
+
+**Before class:**
+* Watch my video on [cross-validation](https://www.youtube.com/watch?v=6dbrR-WymjI&list=PL5-da3qGB5ICeMbQuqbbCOQWcS6OYBr5A&index=7) (36 minutes), or at least scan through the associated [notebook](https://github.com/justmarkham/scikit-learn-videos/blob/master/07_cross_validation.ipynb), to refresh your memory on how cross-validation works and how to use it in scikit-learn.
+* Watch [Kaggle: How it Works](https://www.youtube.com/watch?v=PoD84TVdD-4) (4 minutes) for a brief overview of the Kaggle platform.
+* Browse through the information about Kaggle's [What's Cooking?](https://www.kaggle.com/c/whats-cooking) competition, which is the problem we will work through during class. (The data files have already been added to our repository, so there is no need to download them from Kaggle.)
+* Watch my video presentation about a [past Kaggle competition](https://www.youtube.com/watch?v=HGr1yQV3Um0) (16 minutes) for a tour of the end-to-end machine learning process. (Here are the associated [slides](https://speakerdeck.com/justmarkham/allstate-purchase-prediction-challenge-on-kaggle).)
+
+**During class:**
+* Working a Text-Based Data Science Problem ([notebook](notebooks/05_kaggle.ipynb), [notebook with output](notebooks/05_kaggle_updated.ipynb), [script](scripts/05_kaggle.py))
+    * Kaggle competition: [What's Cooking?](https://www.kaggle.com/c/whats-cooking)
+    * Documentation: [Nearest Neighbors classification](http://scikit-learn.org/stable/modules/neighbors.html#nearest-neighbors-classification), [Cross-validation](http://scikit-learn.org/stable/modules/cross_validation.html), [Dummy estimators](http://scikit-learn.org/stable/modules/model_evaluation.html#dummy-estimators), [Grid search](http://scikit-learn.org/stable/modules/grid_search.html), [Imputation of missing values](http://scikit-learn.org/stable/modules/preprocessing.html#imputation-of-missing-values), [Pipeline](http://scikit-learn.org/stable/modules/pipeline.html)
+
+**After class:**
+* Homework with Hacker News data ([notebook](notebooks/05_hacker_news_homework.ipynb), [script](scripts/05_hacker_news_homework.py))
+    * Dataset: A year of posts from [Hacker News](https://www.kaggle.com/hacker-news/hacker-news-posts)
+
+**Resources:**
+* [Learning from the best](http://blog.kaggle.com/2014/08/01/learning-from-the-best/) is an excellent blog post covering top tips from Kaggle Masters on how to do well on Kaggle.
+* [Getting in Shape for the Sport of Data Science](https://www.youtube.com/watch?v=kwt6XEh7U3g) (74 minutes), by Jeremy Howard (past president of Kaggle), contains a lot of tips for competitive machine learning.
+* [Feature Engineering Without Domain Expertise](https://www.youtube.com/watch?v=bL4b1sGnILU) (17 minutes), a talk by Kaggle Master Nick Kridler, provides some simple advice about how to iterate quickly and where to spend your time during a Kaggle competition.
+* [Non-Mathematical Feature Engineering Techniques](https://codesachin.wordpress.com/2016/06/25/non-mathematical-feature-engineering-techniques-for-data-science/) includes some simple ideas for getting started with feature engineering.
+* [How do I create dummy variables in pandas?](https://www.youtube.com/watch?v=0s_1IsROgDc&list=PL5-da3qGB5ICCsgW1MxlZ0Hq8LL5U3u9y&index=24) (13 minutes) demonstrates three ways to create dummy variables from unordered categorical features, one of the most common feature engineering techniques.
+* Kaggle Master Triskelion provides a list of [advanced feature engineering and feature selection tactics](https://www.kaggle.com/c/bnp-paribas-cardif-claims-management/forums/t/18754/feature-engineering) in a thread from Kaggle's forums.
+* These examples may help you to better understand the process of feature engineering: predicting the number of [passengers at a train station](https://medium.com/@chris_bour/french-largest-data-science-challenge-ever-organized-shows-the-unreasonable-effectiveness-of-open-8399705a20ef), identifying [fraudulent users of an online store](https://docs.google.com/presentation/d/1UdI5NY-mlHyseiRVbpTLyvbrHxY8RciHp5Vc-ZLrwmU/edit#slide=id.p), identifying [bots in an online auction](https://www.kaggle.com/c/facebook-recruiting-iv-human-or-bot/forums/t/14628/share-your-secret-sauce), predicting who will [subscribe to the next season of an orchestra](http://blog.kaggle.com/2015/01/05/kaggle-inclass-stanfords-getting-a-handel-on-data-science-winners-report/), evaluating the [quality of e-commerce search engine results](http://blog.kaggle.com/2015/07/22/crowdflower-winners-interview-3rd-place-team-quartet/), and predicting [user engagement in a corporate social network](https://github.com/mikeyea/DAT7_project/blob/master/final%20project/Class_Presention_MYea.ipynb).
+* Watch my video on [GridSearchCV](https://www.youtube.com/watch?v=Gol_qOgRqfA&list=PL5-da3qGB5ICeMbQuqbbCOQWcS6OYBr5A&index=8) (28 minutes) for a recap of part of this week's lesson. (Here is the associated [notebook](https://github.com/justmarkham/scikit-learn-videos/blob/master/08_grid_search.ipynb).)
